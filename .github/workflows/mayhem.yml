@@ -42,7 +42,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v3.2.0
         with:
-          context: .
           push: true
           file: mayhem/Dockerfile
           tags: ${{ steps.meta.outputs.tags }}
