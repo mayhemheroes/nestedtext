@@ -8,4 +8,4 @@ COPY fuzz/reader.py /reader.py
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD ["/reader.py"]
+CMD ["python3 /reader.py"]

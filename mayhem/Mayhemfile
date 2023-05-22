@@ -1,5 +1,5 @@
 project: nestedtext
 target: nestedtext-reader
 cmds:
-  - cmd: /reader.py
+  - cmd: python3 /reader.py
     libfuzzer: true
