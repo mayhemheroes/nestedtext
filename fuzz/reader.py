@@ -3,7 +3,9 @@
 import sys
 
 import atheris
-import nestedtext as nt
+
+with atheris.instrument_imports():
+    import nestedtext as nt
 
 def TestOneInput(data):
     content = data.decode("utf-8", errors="ignore")
@@ -12,6 +14,5 @@ def TestOneInput(data):
     except nt.NestedTextError:
         pass
 
-atheris.instrument_all()
 atheris.Setup(sys.argv, TestOneInput)
 atheris.Fuzz()
