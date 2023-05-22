@@ -5,7 +5,8 @@ WORKDIR /project
 
 RUN pip install .
 COPY fuzz/reader.py /reader.py
+RUN chmod +x /reader.py
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD ["python3 /reader.py"]
+CMD ["/reader.py"]

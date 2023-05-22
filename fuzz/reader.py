@@ -6,9 +6,9 @@ import atheris
 import nestedtext as nt
 
 def TestOneInput(data):
-    content = data.decode("ascii", errors="ignore")
+    content = data.decode("utf-8", errors="ignore")
     try:
-        nt.loads(content, top="dict")
+        nt.loads(content)
     except nt.NestedTextError:
         pass
 
